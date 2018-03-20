@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="${siteurl}${siteurl}favicon.ico">
+    <title>${model.name!""}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${siteurl}plugins/font/font_t9eba0ch4mwjyvi/iconfont.css">
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/common.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/drag.css">
+    [#include "/theme/default/common/sites.html" /]
+    [#include "/theme/default/project/common.html" /]
+</head>
+<body>
+[@header index=1 /]
+<div class="father">
+    [@leftnav index=1 /]
+    <div class="right">
+        <!--<div class="scaling">-->
+            <!--<div class="hd">-->
+                <!--<div class="input">-->
+                    <!--<a class="selectui-result dropdown-toggle">负责和参与的项目<i class="iconfont icon-f11"></i></a>-->
+                    <!--<ul>-->
+                        <!--<li><a>负责和参与的项目</a></li>-->
+                        <!--<li><a>负责的项目</a></li>-->
+                        <!--<li><a>参与的项目</a></li>-->
+                        <!--<li><a>创建的项目</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="ft">-->
+                <!--<ul>-->
+                    <!--[#list 1..10 as item]-->
+                    <!--<li>-->
+                        <!--<dt><img src="./img/18.png"><div class="percent j_percent">0%</div></dt>-->
+                        <!--<dd><div class="caption"><div class="cell"><span data-toggle="tooltip" data-placement="top" title="Tooltip on top">吴堡县公安局城区派出所地勘编制</span></div></div></dd>-->
+                    <!--</li>-->
+                   <!--[/#list]-->
+                <!--</ul>-->
+                <!--<div class="bottom" style="height: 112px"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="projectInformation">
+            <div class="header">
+                <div class="img">
+                    <img src="./img/18.png" alt="">
+                    <div class="shade">0%</div>
+                    <p data-toggle="tooltip" data-placement="bottom" title="${model.name!''}">${model.name!""}</p>
+                </div>
+                [@headnav index=1 /]
+            </div>
+            <div class="toolkit-bar">
+                <ul>
+                    <li>
+                        <span>筛选<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <span>排序<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-sousuo"></i>
+                        <input class="fatherInput" type="text" placeholder="搜索任务">
+                    </li>
+                    <li>
+                        <span>+&nbsp;新建任务分组</span><i class="iconfont  icon-arrow-down"></i>
+                    </li>
+                    <li>
+                        <span>排序<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="vehicle" value="Car" />
+                        包含已完成
+                    </li>
+                </ul>
+            </div>
+            <div id="jk" class="coment" data-project="${model.id}">
+                [#if model.entries??]
+                [#list model.entries as item]
+                <div  class="find" index="${item.id}">
+                    <div class="top"><span class="findSpan">${item.name!""}</span>
+                        <div class="open">
+                            <i class="glyphicon glyphicon-option-horizontal"></i>
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li class="lis4">重命名</li>
+                                <li class="open-lis">删除分组</li>
+                            </ul>
+                        </div>
+                </div>
+                    <ul id="sortable1" class="cc">
+                        [#if item.tasks??]
+                        [#list item.tasks as item]
+                        <li class="lis" data-id="${item.id}"><p><span>${item?index}</span><i>${item.title!""}</i><b>贾魁</b>_<strong>2018/1/8</strong></p><img src="./img/18.png" alt=""></li>
+                        [/#list]
+                        [/#if]
+                    </ul>
+                    <div class="bottom">
+                        <div class="text">
+                            <textarea name="a" placeholder="请输入标题"></textarea>
+                            <span class="btn1">取消</span>
+                            <span class="btn2">确定</span>
+                        </div>
+                        <div class="text2">+安排任务</div>
+                    </div>
+                </div>
+                [/#list]
+                [/#if]
+            </div>
+            <div class="pbox">
+                <ul class="pop-menu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>删除</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="${siteurl}dist/js/common.js"></script>
+<script src="${siteurl}dist/js/drag.js"></script>
+<script>
+</script>
+</body>
+</html>

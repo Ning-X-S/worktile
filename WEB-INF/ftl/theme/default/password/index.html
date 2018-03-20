@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/sign-global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/password.css">
+    [#include "/theme/default/common/header.html" /]
+    [#include "/theme/default/password/step.html" /]
+</head>
+<body>
+[@nav /]
+<section class="content">
+    [@step index=1 /]
+    <!--表单-->
+    <div class="pwdContent">
+        <div class="error pl150 error-curr"></div>
+        <div class="ui-form-item">
+            <label class="ui-label" for="username">邮箱或手机：</label>
+            <input class="ui-input" id="username" type="text" name="username" value="">
+        </div>
+        <div class="ui-form-item pl150">
+            <button type="submit" class="btn btn-lg btn-primary">下一步</button>
+        </div>
+        <div class="ui-form-item pl150"><a class="back" href="${siteurl}login.htm">返回登录</a></div>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".btn-lg").on("click",function(){
+            var username = $("#username").val();
+            if(username === ""){
+                $(".error").html("邮箱或手机不能为空").css("display","block");
+            }else {
+                window.location.href = "${siteurl}password/reset.htm";
+            }
+        })
+    })
+</script>
+</body>
+</html>

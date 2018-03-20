@@ -1,0 +1,10 @@
+[#macro nav index]
+<div class="base-nav">
+    <ul>
+        <li><a href="#" ></a></li>
+        <li [#if index==1]class="headerActive"[/#if] ><a  href="${siteurl}task/index.htm"   style="text-decoration:none;"><i></i><span>任务</span></a></li>
+        <li [#if index==2]class="headerActive"[/#if] ><a  href="${siteurl}workflows/index.htm"  style="text-decoration:none;"><i></i><span>审批</span></a></li>
+        <li [#if index==3]class="headerActive"[/#if] ><a  href="${siteurl}project/index.htm"     style="text-decoration:none;"><i></i><span>项目</span></a></li>
+    </ul>
+</div>
+[/#macro]

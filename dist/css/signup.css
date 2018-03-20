@@ -1,0 +1,393 @@
+.hide {
+    display: none;
+}
+.cl {
+    clear: both;
+}
+.mgt5 {
+    margin-top: 5px;
+}
+.mgt10 {
+    margin-top: 10px;
+}
+.mgr10 {
+    margin-right: 10px;
+}
+.mgb20 {
+    margin-bottom: 20px;
+}
+.mgl95 {
+    margin-left: 95px;
+}
+.w280 {
+    width: 280px    ;
+}
+/*第一步骤css*/
+/*表单样式*/
+.res-person-panel {
+    width:700px;
+    padding-top: 30px;
+}
+form {
+    display: block;
+}
+.ui-form-item {
+    padding-bottom: 20px;
+}
+.res-person-panel .ui-label {
+    width:85px;
+    letter-spacing:1px;
+}
+.ui-label {
+    color: #4c4c4c;
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 10px;
+    text-align: right;
+    padding-top: 13px;
+    width:140px;
+    float:left;
+}
+.res-person-panel .ui-input {
+    width:330px;
+}
+input {
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+}
+.ui-input {
+    width:310px;
+    color: #4d4d4d;
+    border: 1px solid #dddddd;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 18px;
+    padding: 11px 10px;
+    vertical-align: middle;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+.ui-input-wrong:hover, .ui-input-wrong:focus {
+    border-color: #ac3635;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px #CE8483;
+}
+
+.res-person-panel .ui-input-check {
+    width:130px;
+}
+
+input:focus {
+    /* border-color:#66AFE9; */
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px rgba(102, 175, 233, 0.6);
+}
+/*同意条款以及点击进入下一步*/
+
+.pl95 {
+    padding-left: 95px;
+}
+.mgb20 a {
+    color: #3366CC;
+}
+input[type="radio"], input[type="checkbox"] {
+    background-color: initial;
+    cursor: default;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+.ui-checkbox {
+    margin-bottom: 2px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 12px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#f1f1f1);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f1f1f1));
+    background-image: -webkit-linear-gradient(top,#fff,#f1f1f1);
+    background-image: -o-linear-gradient(top,#fff,#f1f1f1);
+    background-image: linear-gradient(to bottom,#fff,#f1f1f1);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #666666;
+}
+.btn-primary {
+    color: #ffffff;
+    background-color: #428bca;
+    background-image: none;
+    border-color: #357ebd;
+}
+.btn-lg {
+    font-size: 16px;
+    line-height: 1.33;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.btn:hover {
+    background-color: #f4f3f3;
+    background-image: none;
+}
+.btn:hover, .btn:focus {
+    color: #333333;
+    text-decoration: none;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+/*第二步骤css*/
+.check-panel {
+    width: 780px;
+}
+.borderbox {
+    border: 1px solid #ddd;
+}
+h1.singleHead, h2.singleHead {
+    line-height: 68px;
+    font-size: 24px;
+    color: #666;
+    margin-top: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+h2.singleHead {
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: normal;
+    background: #f9f9f9;
+    padding-left: 20px;
+}
+.ui-form-checkbox {
+    padding: 0 20px 20px;
+}
+.check-mobile .ui-form-checkbox {
+    width: 400px;
+    margin: 0 auto;
+}
+.check-mobile-btns {
+    margin: 20px 0 20px;
+}
+.not-validated-mobile {
+    color: #ffffff;
+    background-color: #428bca;
+    background-image: none;
+    border-color: #357ebd;
+}
+.check-mobile-btns .btn {
+    width: 210px;
+    margin: 10px auto;
+}
+span.nvm-span {
+    text-align: center;
+    width: 100%;
+    display: block!important;
+}
+.ui-tiptext {
+    line-height: 15px;
+    padding: 0 0 0 22px;
+    position: relative;
+}
+.check-mobile .ui-tiptext {
+    width: 400px;
+    margin: 10px auto;
+}
+
+/*邮箱验证*/
+.check-tiptext {
+    margin: 15px 0 20px 20px;
+}
+.ui-tiptext-icon {
+    background: url(../img/icons-tip.png) no-repeat;
+    background-position: 0 -33px;
+    display: block;
+    height: 15px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 15px;
+}
+.ui-form-checkbox .ui-form-item {
+    padding: 10px 0;
+}
+.f14 {
+    font-size: 14px;
+}
+.ui-form-checkbox .ui-label {
+    width: 85px;
+    padding-top: 6px;
+}
+.check-email-btns {
+    margin: 40px 0 20px;
+}
+.tc {
+    text-align: center;
+}
+.check-email-btns .btn {
+    width: 210px;
+    margin-top: 15px;
+}
+.check-email-btns span {
+    display: inline-block;
+    color: #999;
+    margin-top: 5px;
+}
+.check-help {
+    color: #3366CC;
+    background-image: url(../img/expand-arrow.png);
+    background-position: right 0;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+.check-email-btns p + p {
+    margin-top: 20px;
+}
+
+/*没收到邮件*/
+.js_help_container {
+    margin: 10px 0 0;
+}
+.g-550 {
+    width: 550px;
+}
+.check-email-btns .ui-tipbox {
+    background: #f9f9f9;
+    border: 1px solid #B9C8D3;
+    border-radius: 2px;
+    box-shadow: 0 0 3px #ccc;
+    color: #666;
+    margin-left: 165px;
+}
+.ui-tipbox .ui-tipbox-container {
+    padding: 15px 32px 15px 20px;
+}
+.ui-tipbox .ui-list .ui-list-item {
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+.btn-xs {
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.ui-list-item .btn {
+    margin: 0 2px;
+}
+.ui-text {
+    line-height: 30px;
+    font-size: 14px;
+}
+.ui-form-item span strong {
+    font-weight: bold;
+}
+.ui-input-check {
+    width: 100px;
+    margin-right: 10px;
+}
+.ui-form-checkbox .ui-input {
+     padding: 6px;
+}
+.send-phone-msg {
+    height: 32px;
+}
+
+#next-btn {
+    width: 68px;
+    color: #fff;
+}
+
+/*第三步骤css*/
+
+.res-panel {
+    position: relative;
+    width: 780px;
+}
+.box-shadow {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+.res-company-panel.box-shadow {
+    padding-top: 20px;
+}
+.company-search-panel {
+    padding: 20px 45px 0;
+}
+#account-info strong {
+    font-weight: bold;
+    color: #161e21;
+}
+.res-follow {
+    margin: 20px auto;
+}
+.inviteCode-div {
+    margin: 0 auto;
+    width: 260px;
+}
+.inviteCode-div .ui-label {
+    padding-top: 5px;
+    width: auto!important;
+}
+.inviteCode-div .ui-input {
+    padding: 6px 10px;
+    width: 180px;
+}
+.c-ltgray {
+    color: #999;
+}
+.btn-success {
+    color: #ffffff;
+    background-color: #5cb85c;
+    background-image: none;
+    border-color: #4cae4c;
+}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
+    color: #ffffff;
+    background-color: #47a447;
+    border-color: #398439;
+}
+#back-btn {
+    color: #3366CC;
+}
+
+/*创建团队*/
+.res-panel h3 {
+    margin: 0 0 25px;
+    padding: 0 0 25px;
+    border-bottom: 1px dashed #ccc;
+    font-size: 18px;
+    color: #333;
+}
+hr {
+    height: 0;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+.company-search-panel hr {
+    margin: 30px 0;
+    border-style: dashed;
+}
+.btn.hide {
+    display: none !important;
+}

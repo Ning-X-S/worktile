@@ -1,0 +1,22 @@
+.father .left .tab i {
+    background: url(../img/eteams_icons.png) no-repeat -32px 0;
+}
+.father .left .tab i.comment {
+    background: url(../img/eteams_icons.png) no-repeat -160px 0;
+}
+.father .left .tab i.manage {
+    background: url(../img/eteams_icons.png) no-repeat -192px 0;
+}
+.father .left .tab i.setting {
+    background: url(../img/eteams_icons.png) no-repeat -240px 0;
+}
+.father .left .tab i.glyphicon {
+    background: none;
+}
+
+.father .right .ul {
+    margin-top: 40px;
+}
+#main {
+    padding-top: 40px;
+}

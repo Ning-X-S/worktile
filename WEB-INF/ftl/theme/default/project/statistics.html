@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="${siteurl}${siteurl}favicon.ico">
+    <title>${model.name!""}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${siteurl}plugins/font/font_t9eba0ch4mwjyvi/iconfont.css">
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/common.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/statistics.css">
+    <style>
+    </style>
+    [#include "/theme/default/common/sites.html" /]
+    [#include "/theme/default/project/common.html" /]
+</head>
+<body>
+[@header index=1 /]
+<div class="father">
+    [@leftnav index=1 /]
+    <div class="right">
+        <!--<div class="scaling">-->
+        <!--<div class="hd">-->
+        <!--<div class="input">-->
+        <!--<a class="selectui-result dropdown-toggle">负责和参与的项目<i class="iconfont icon-f11"></i></a>-->
+        <!--<ul>-->
+        <!--<li><a>负责和参与的项目</a></li>-->
+        <!--<li><a>负责的项目</a></li>-->
+        <!--<li><a>参与的项目</a></li>-->
+        <!--<li><a>创建的项目</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ft">-->
+        <!--<ul>-->
+        <!--[#list 1..10 as item]-->
+        <!--<li>-->
+        <!--<dt><img src="./img/18.png"><div class="percent j_percent">0%</div></dt>-->
+        <!--<dd><div class="caption"><div class="cell"><span data-toggle="tooltip" data-placement="top" title="Tooltip on top">吴堡县公安局城区派出所地勘编制</span></div></div></dd>-->
+        <!--</li>-->
+        <!--[/#list]-->
+        <!--</ul>-->
+        <!--<div class="bottom" style="height: 112px"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="projectInformation">
+            <div class="header">
+                <div class="img">
+                    <img src="./img/18.png" alt="">
+                    <div class="shade">0%</div>
+                    <p data-toggle="tooltip" data-placement="bottom" title="${model.name!''}">${model.name!""}</p>
+                </div>
+                [@headnav index=10 /]
+            </div>
+            <div class="toolkit-bar">
+                <ul>
+                    <li>
+                        <span>筛选<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <span>排序<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-sousuo"></i>
+                        <input class="fatherInput" type="text" placeholder="搜索任务">
+                    </li>
+                    <li>
+                        <span>+&nbsp;新建任务分组</span><i class="iconfont  icon-arrow-down"></i>
+                    </li>
+                    <li>
+                        <span>排序<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="vehicle" value="Car" />
+                        包含已完成
+                    </li>
+                </ul>
+            </div>
+            <div id="jk" class="coment">
+                <div class="project-stat-head">
+                    <ul>
+                        <li class="current">项目进度</li>
+                        <li>任务周报</li>
+                    </ul>
+                </div>
+                <div class="project-stat-footer">
+                    <ul>
+                        <li class="section-area">
+                            <div class="panel-heading">
+                                <span>企业任务统计</span>
+                            </div>
+                            <div class="panel-body">
+                                <div class="flex-se1">
+                                    <div id="main1" style="width: 300px;height:200px;margin:0px;float:left;"></div>
+                                    <div id="main2" style="width: 300px;height:200px;margin:0px;float:left;"></div>
+                                </div>
+                                <div class="flex-se1">
+                                    <ul class="stat-status-item-ul">
+                                        <li class="stat-status-item"><p>待完成</p><h3>19</h3></li>
+                                        <li class="stat-status-item"><p>延期</p><h3>17</h3></li>
+                                        <li class="stat-status-item"><p>已完成</p><h3>74</h3></li>
+                                        <li class="stat-status-item"><p>任务总数</p><h3>93</h3></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="section-area">
+                            <div class="panel-heading">
+                                <span>项目燃尽图</span>
+                            </div>
+                            <div class="panel-body">
+                                    <div id="main3" style="width: 100%;height:240px;margin:0px;"></div>
+                            </div>
+                        </li>
+                        <li class="section-area">
+                            <div class="panel-heading">
+                                <span>新增任务与完成任务</span>
+                            </div>
+                            <div class="panel-body">
+                                <div id="main4" style="width: 100%;height:240px;margin:0px;"></div>
+                            </div>
+                        </li>
+                        <li class="section-area">
+                            <div class="panel-heading">
+                                <span>任务列表</span>
+                            </div>
+                            <div class="panel-body">
+                                <div id="main5" style="width: 100%;height:240px;margin:0px;"></div>
+                            </div>
+                        </li>
+                        <li class="section-area">
+                            <div class="panel-heading">
+                                <span>标签</span>
+                            </div>
+                            <div class="panel-body">
+                                <div id="main6" style="width: 100%;height:240px;margin:0px;"></div>
+                            </div>
+                        </li>
+                        <li class="section-area">
+                            <div class="panel-heading">
+                                <span>标签</span>
+                            </div>
+                            <div class="panel-body">
+                                <table align='center' style="border-collapse:collapse;border: 1px solid #eee">
+                                    <thead>
+                                    <tr>
+                                        <th>成员</th>
+                                        <th>待完成</th>
+                                        <th>已延期</th>
+                                        <th>已完成</th>
+                                        <th>任务总数</th>
+                                        <th>延误率</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><img src="" alt=""><span></span></td>
+                                        <td>23</td>
+                                        <td>4</td>
+                                        <td>6</td>
+                                        <td>55</td>
+                                        <td>55</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="" alt=""><span></span></td>
+                                        <td>11</td>
+                                        <td>11</td>
+                                        <td>11</td>
+                                        <td>11</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="" alt=""><span></span></td>
+                                        <td>33</td>
+                                        <td>33</td>
+                                        <td>33</td>
+                                        <td>33</td>
+                                        <td>33</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="" alt=""><span></span></td>
+                                        <td>67</td>
+                                        <td>67</td>
+                                        <td>67</td>
+                                        <td>67</td>
+                                        <td>67</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="" alt=""><span></span></td>
+                                        <td>89</td>
+                                        <td>89</td>
+                                        <td>89</td>
+                                        <td>89</td>
+                                        <td>89</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="" alt=""><span></span></td>
+                                        <td>93</td>
+                                        <td>93</td>
+                                        <td>93</td>
+                                        <td>93</td>
+                                        <td>93</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="project-stat-footer">
+                    <div class="panel-heading">
+                        <span>任务周报</span>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>
+                                <div class="panel-body-left">
+                                    <p>延期任务</p>
+                                    <h2>0</h2>
+                                </div>
+                                <div class="panel-body-right">3</div>
+                            </li>
+                            <li>
+                                <div class="panel-body-left">
+                                    <p>已完成任务</p>
+                                    <h2>12</h2>
+                                </div>
+                                <div class="panel-body-right">2</div>
+                            </li>
+                            <li>
+                                <div class="panel-body-left">
+                                    <p>新增任务</p>
+                                    <h2>24</h2>
+                                </div>
+                                <div class="panel-body-right">1</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="${siteurl}dist/js/echarts.min%20(1).js"></script>
+<script src="${siteurl}dist/js/common.js"></script>
+<script src="${siteurl}dist/js/statistics.js"></script>
+<script>
+<!--echarts1-->
+ var myChart1 = echarts.init(document.getElementById('main1'));
+option1 = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'left',
+        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    },
+    series: [
+        {
+            name:'项目进展',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:335, name:'完成'},
+                {value:310, name:'未完成'},
+            ]
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+
+<!--echarts2-->
+var myChart2 = echarts.init(document.getElementById('main2'));
+option2 = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'left',
+        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    },
+    series: [
+        {
+            name:'项目进展',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:335, name:'完成'},
+                {value:310, name:'未完成'},
+            ]
+        }
+    ]
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+<!--echarts3-->
+var myChart3 = echarts.init(document.getElementById('main3'));
+option3 = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            left: 'center',
+            data:['参考线','实际线']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            data: ['1月22日','1月23日','1月24日','1月25日','1月26日','1月27日','1月28日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'参考线',
+                type:'line',
+                stack: '总量',
+                data:[120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name:'实际线',
+                type:'line',
+                stack: '总量',
+                data:[220, 182, 191, 234, 290, 330, 310]
+            }
+        ]
+    };
+    myChart3.setOption(option3);
+<!--echarts-->
+var myChart4 = echarts.init(document.getElementById('main4'));
+option4 = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            left: 'center',
+            data:['新增任务','完成任务']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+             boundaryGap: false,
+            data: ['1月22日','1月23日','1月24日','1月25日','1月26日','1月27日','1月28日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'新增任务',
+                type:'line',
+                stack: '总量',
+                data:[120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name:'完成任务',
+                type:'line',
+                stack: '总量',
+                data:[220, 182, 191, 234, 290, 330, 310]
+            }
+        ]
+    };
+    myChart4.setOption(option4);
+<!--echarts-->
+var myChart5 = echarts.init(document.getElementById('main5'));
+option5 = {
+    legend: {},
+        tooltip: {},
+        dataset: {
+            source: [
+                ['product', '完成','未完成'],
+                ['新增加功能',  85,11],
+                ['版本发布', 83,19],
+                ['新需求讨论', 86,41],
+                ['bug修改', 82,45],
+                ['数据问题处理', 82,45]
+            ]
+        },
+    xAxis: {
+        type: 'category',
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+            {type: 'bar','stack':"sum",barWidth:50},{type: 'bar','stack':"sum",barWidth:50}
+        ]
+};
+myChart5.setOption(option5);
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="${siteurl}${siteurl}favicon.ico">
+    <title>${model.name!""}-项目动态</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${siteurl}plugins/font/font_t9eba0ch4mwjyvi/iconfont.css">
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/common.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/feed.css">
+    [#include "/theme/default/common/sites.html" /]
+    [#include "/theme/default/project/common.html" /]
+</head>
+<body>
+<header>
+    <div class="header-name">
+        <img src="${siteurl}dist/img/avatar.png" alt="">
+        <a href="#">
+            <span>贾魁</span>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+        </a>
+    </div>
+    <div class="hover">
+        <p>在此您可以切换团队，还可以创建或加入团队</p>
+        <p><span>同纳信息</span></p>
+        <p>+ 创建或加入团队</p>
+    </div>
+    [@nav index=3 /]
+    <div class="quick-menu">
+        <ul>
+            <li>
+                <input type="text" placeholder="全文检索">
+                <a href="#" class="search-btn">
+                    <i class="iconfont icon-sousuo"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i></i>
+                </a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i></i>
+                </a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="graph-eteams"></i>
+                    <i class="graph-eteams-hover"></i>
+                    <b class="iconfont icon-arrow"></b>
+                </a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="father">
+    <div class="left">
+        <div class="tab"><i></i>项目</div>
+        <ul>
+            <li><a href="${siteurl}project/index.htm" class="active"><span>我的项目</span></a></li>
+            <li><a href="javascript:void(0)"><span>关注的项目</span></a></li>
+            <li><a href="javascript:void(0)"><span>共享给我的项目</span></a></li>
+            <li><a href="javascript:void(0)"><span>已关闭的项目</span></a></li>
+            <li><a href="javascript:void(0)"><span>全部项目</span></a></li>
+        </ul>
+        <div class="tab"><span class="iconfont icon-huishouzhan"></span>垃圾桶</div>
+    </div>
+    <div class="right">
+        <div class="projectInformation">
+            <div class="header">
+                <div class="img">
+                    <img src="./img/18.png" alt="">
+                    <div class="shade">0%</div>
+                    <p data-toggle="tooltip" data-placement="bottom" title="${model.name!''}">${model.name!""}</p>
+                </div>
+                [@headnav index=0 /]
+            </div>
+            <div class="right-footer">
+                <div class="main-content">
+                    <div id="blog-post">
+                        <div class="simditor-body">
+                            <textarea name="a" placeholder="记录一下您今天的工作成果和心得吧......"></textarea>
+                        </div>
+                        <div class="blog-post-handle">
+                            <button>发布</button>
+                        </div>
+                    </div>
+                    <div id="blogs-container">
+                        <ul>
+                            <li>2018年1月9日</li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                            <li>
+                                <strong>昨天</strong>
+                                <span>无日报内容</span>
+                                <div class="blog-records-fold">来自系统工作记录<i class="glyphicon glyphicon-chevron-right"></i></div>
+                                <div class="blog-records-wrapper">您的团队目前是免费版本，不支持此功能！</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="siderbar-ctrl-btn"></div>
+                </div>
+                <div class="main-sidebar">
+                    <ul>
+                        <li>
+                            <div class="avatar-info">
+                                <img src="${siteurl}dist/img/avatar.png" alt="">
+                            </div>
+                            <div class="profile-info">
+                                <p>
+                                    <span>贾奎</span>
+                                    <i></i>
+                                    <a href="#"></a>
+                                </p>
+                                <p title="同纳信息">同纳信息</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p>邮箱：<span>1342221055@qq.com</span></p>
+                            <p>电话：<span></span></p>
+                            <p>上级：<span></span></p>
+                            <p>岗位：<span></span></p>
+                            <p>状态：<span>在职</span></p>
+                            <p>入职时间：<span>2017-12-13</span></p>
+                        </li>
+                        <li>收起<i class="glyphicon glyphicon-chevron-right"></i></li>
+                        <li>
+                            <div class="taskCount">
+                                <p><span>22</span><i>任务</i></p>
+                                <p><span>11</span><i>项目</i></p>
+                                <p><span>3</span><i>文档</i></p>
+                            </div>
+                            <b>最近登录：<span>2018-01-09 15:19</span></b>
+                            <b>登录次数：<span>30</span> <a href="#">出勤轨迹</a></b>
+                        </li>
+                        <li>
+                            <div class="tab j_visitorTab">
+                                <a class="current">最近来访</a>
+                                <a>最近访问</a>
+                            </div>
+                            <div class="visitor-list">
+                                <div class="div_myVisitors">1</div>
+                                <div class="div_myVisitors">2</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="${siteurl}dist/js/common.js"></script>
+<script src="${siteurl}dist/js/feed.js"></script>
+<script>
+</script>
+</body>
+</html>

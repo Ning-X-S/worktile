@@ -1,0 +1,28 @@
+[#macro step index]
+<div class="g-780 step-panel">
+    <div class="nav-container">
+        <ol class="ui-step ui-step-3 cl">
+            <li class="ui-step-item [#if index==1]current[/#if] [#if index==2||index=3]active[/#if]">
+                <div class="ui-step-line"></div>
+                <div class="ui-step-icon">
+                    <div></div>
+                    <span>填写workon账号</span>
+                </div>
+            </li>
+            <li class="ui-step-item [#if index==2]current[/#if] [#if index=3]active[/#if]">
+                <div class="ui-step-line"></div>
+                <div class="ui-step-icon">
+                    <div></div>
+                    <span>选择找回密码方式</span>
+                </div>
+            </li>
+            <li class="ui-step-item [#if index==3]current[/#if]">
+                <div class="ui-step-icon">
+                    <div></div>
+                    <span>找回密码</span>
+                </div>
+            </li>
+        </ol>
+    </div>
+</div>
+[/#macro]

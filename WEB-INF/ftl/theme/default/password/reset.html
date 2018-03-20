@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/sign-global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/password.css">
+    [#include "/theme/default/common/header.html" /]
+    [#include "/theme/default/password/step.html" /]
+</head>
+<body>
+[@nav /]
+<section class="content">
+    [@step index=2 /]
+    <!--表单-->
+    <div class="pwdContent">
+        <div class="title">您正在找回15706086292的密码  <a class="changeAccount" href="${siteurl}password/index.htm">[换一个帐号]</a></div>
+        <div class="error"></div>
+        <ul class="way">
+            <li><a class="emailWay" href="javascripe:void(0)">【1.通过邮箱】</a></li>
+            <li><a class="mobileWay" href="${siteurl}password/validateAccount.htm?way=phone">【2.通过手机】</a></li>
+            <li>【3.通过客服】&nbsp;&nbsp;请联系客服进行处理</li>
+        </ul>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".emailWay").on("click",function(){
+            $(".error").html("重置密码的邮件已发送到你的邮箱中，请注意查收。").css("display","block")
+        })
+    })
+</script>
+</body>
+</html>

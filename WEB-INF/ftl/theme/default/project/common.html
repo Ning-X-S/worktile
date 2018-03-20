@@ -1,0 +1,113 @@
+[#macro headnav index]
+<ul class="head-nav j_head-nav j_e-nav-tab">
+    <li [#if index==0]class="current"[/#if] class="j_mainline_link router" data-type="blog">
+        <a href="${siteurl}project/feed/${model.id}.htm">最新动态</a></li>
+    <li [#if index==1]class="current"[/#if] class="j_mainline_link router" data-type="task" acl-module-id="1">
+        <a href="${siteurl}project/${model.id}.htm">任务</a></li>
+    <li [#if index==2]class="current"[/#if] class="j_mainline_link router" data-type="document" acl-module-id="4">
+        <a href="${siteurl}project/customer/${model.id}.htm">业主</a>
+    </li>
+    <li [#if index==3]class="current"[/#if] class="j_mainline_link router" data-type="document" acl-module-id="4">
+        <a href="${siteurl}project/bid/${model.id}.htm">投标</a>
+    </li>
+    <li [#if index==4]class="current"[/#if] class="j_mainline_link router" data-type="workflow" acl-module-id="2">
+        <a  href="${siteurl}project/bidassure/${model.id}.htm">保证金</a></li>
+    <li [#if index==5]class="current"[/#if] class="j_mainline_link router" data-type="calendar" acl-module-id="7">
+        <a  href="${siteurl}project/contract/${model.id}.htm">合同</a></li>
+    <li [#if index==6]class="current"[/#if] class="j_mainline_link router" data-type="formdatareport" acl-module-id="11">
+        <a  href="${siteurl}project/invoice/${model.id}.htm">开票</a></li>
+    <li [#if index==7]class="current"[/#if] class="j_mainline_link router" data-type="form" acl-module-id="11">
+        <a  href="${siteurl}project/gathering/${model.id}.htm">收款</a></li>
+    <li [#if index==8]class="current"[/#if] class="j_mainline_link router" data-type="kpiFlow" acl-module-id="31">
+        <a  href="${siteurl}project/balance/${model.id}.htm">结算</a></li>
+    <li [#if index==9]class="current"[/#if] class="j_mainline_link router" data-type="workreport" acl-module-id="8">
+        <a  href="${siteurl}project/report/${model.id}.htm">报告</a></li>
+    <li [#if index==10]class="current"[/#if] class="j_mainline_link router" data-type="static">
+        <a  href="${siteurl}project/statistics/${model.id}.htm">统计</a></li>
+    <li [#if index==11]class="current"[/#if] class="j_mainline_link router" data-type="mainlineReport">
+        <a  href="${siteurl}project/status/${model.id}.htm">项目状态</a></li>
+</ul>
+[/#macro]
+
+[#macro leftnav index]
+<div class="left">
+    <div class="tab"><i></i>项目</div>
+    <ul>
+        <li><a href="${siteurl}project/index.htm" class="active"><span>我的项目</span></a></li>
+        <li><a href="javascript:void(0)"><span>关注的项目</span></a></li>
+        <li><a href="javascript:void(0)"><span>共享给我的项目</span></a></li>
+        <li><a href="javascript:void(0)"><span>已关闭的项目</span></a></li>
+        <li><a href="javascript:void(0)"><span>全部项目</span></a></li>
+    </ul>
+    <div class="tab"><span class="iconfont icon-huishouzhan"></span>垃圾桶</div>
+</div>
+[/#macro]
+
+[#macro header index]
+<header>
+    <div class="header-name">
+        <img src="./img/avatar.png" alt="">
+        <a href="#">
+            <span>贾魁</span>
+            <i class="glyphicon glyphicon-chevron-down"></i>
+        </a>
+    </div>
+    <div class="hover">
+        <p>在此您可以切换团队，还可以创建或加入团队</p>
+        <p><span>同纳信息</span></p>
+        <p>+ 创建或加入团队</p>
+    </div>
+    [@nav index=3 /]
+    <div class="quick-menu">
+        <ul>
+            <li>
+                <input type="text" placeholder="全文检索">
+                <a href="#" class="search-btn">
+                    <i class="iconfont icon-sousuo"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i></i>
+                </a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i></i>
+                </a>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+[/#macro]

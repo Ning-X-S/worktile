@@ -1,0 +1,209 @@
+.g-600 {
+    width: 600px;
+}
+.cl {
+    clear: both;
+}
+.mgr40 {
+    margin-right: 40px;
+}
+/*登录样式*/
+.login-panel {
+    position: relative;
+    margin-top: 80px;
+}
+.login-panel .box-shadow {
+    padding: 0;
+    width: auto;
+}
+.box-shadow {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+h1.singleHead, h2.singleHead {
+    line-height: 68px;
+    font-size: 24px;
+    color: #666;
+    margin-top: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.login-panel .singleHead {
+    text-align: center;
+}
+.login-panel .ui-form {
+    padding: 50px 50px 25px;
+    position: relative;
+}
+.login-panel .ui-form-item {
+    padding-bottom: 20px;
+}
+.ui-label {
+    color: #4c4c4c;
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 10px;
+    padding-top: 7px;
+    text-align: right;
+    padding-top: 13px;
+    width: 140px;
+    float: left;
+}
+.login-panel .ui-label {
+    width: 50px;
+    margin-right: 0;
+    text-align: left;
+}
+.ui-input {
+    box-sizing: inherit;
+    width: 310px;
+    color: #4d4d4d;
+    border: 1px solid #dddddd;
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+    padding: 11px 10px;
+    vertical-align: middle;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+.login-panel .ui-input {
+    width: 426px;
+    text-align: inherit;
+}
+.login-bar {
+    margin: 5px 0;
+    padding-left: 50px;
+}
+.login-bar * {
+    vertical-align: top;
+    margin-bottom: 0;
+    line-height: 13px;
+}
+.fr {
+    float: right;
+    color: #3366CC;
+}
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 12px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#f1f1f1);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f1f1f1));
+    background-image: -webkit-linear-gradient(top,#fff,#f1f1f1);
+    background-image: -o-linear-gradient(top,#fff,#f1f1f1);
+    background-image: linear-gradient(to bottom,#fff,#f1f1f1);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #666666;
+}
+.btn-primary {
+    color: #ffffff;
+    background-color: #428bca;
+    background-image: none;
+    border-color: #357ebd;
+}
+.btn-lg {
+    font-size: 16px;
+    line-height: 1.33;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.fmes-bar .btn {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: #ffffff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+.btn:active, .btn.active {
+    color: #333333;
+    text-decoration: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+/*第三方登录*/
+.login-otherway {
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+    padding: 10px;
+}
+.login-otherway h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.login-otherway .a-icons {
+    font-size: 0;
+    text-align: center;
+}
+.login-otherway .a-icons a {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    margin: 0 10px;
+    background: url(../img/icons_loginway.png) no-repeat;
+    -webkit-transition: background-position 0.2s ease;
+    -moz-transition: background-position 0.2s ease;
+    -ms-transition: background-position 0.2s ease;
+    -o-transition: background-position 0.2s ease;
+    transition: background-position 0.2s ease;
+    background-size: 180px 90px;
+}
+.login-otherway .a-icons a.qq {
+    background-position: 0 0;
+}
+.login-otherway .a-icons a.weibo {
+    background-position: -45px 0;
+}
+.login-otherway .a-icons a.wechat {
+    background-position: -90px 0;
+}
+.login-otherway .a-icons a.enterprise {
+    background-position: -135px 0;
+}
+.login-otherway .a-icons a.qq:hover {
+    background-position: 0 -45px;
+}
+.login-otherway .a-icons a.weibo:hover {
+    background-position: -45px -45px;
+}
+.login-otherway .a-icons a.wechat:hover {
+    background-position: -90px -45px;
+}
+.login-otherway .a-icons a.enterprise:hover {
+    background-position: -135px -45px;
+}
+.login-otherway .a-icons-txt {
+    height: 20px;
+    margin: 5px auto;
+    width: 260px;
+}
+.login-otherway .a-icons-txt span {
+    color: #B0B0B0;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0 8px;
+    text-align: center;
+    width: 49px;
+}

@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>项目</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${siteurl}plugins/font/font_t9eba0ch4mwjyvi/iconfont.css">
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}plugins/beatpicker/css/BeatPicker.min.css">
+    <link rel="stylesheet" href="${siteurl}plugins/beatpicker/css/demos.css">
+    <link rel="stylesheet" href="${siteurl}plugins/beatpicker/css/prism.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/common.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/index.css">
+    [#include "/theme/default/common/sites.html" /]
+    [#include "/theme/default/project/common.html" /]
+
+</head>
+<body>
+    [@header index=1 /]
+<div class="father">
+    [@leftnav index=1 /]
+    <div class="right">
+        <div class="sort">
+            <ul>
+                <li  class="dropDownList">
+                    <div class="div">
+                        <a href="">
+                            <span>负责和参与的项目</span>
+                            <i class="iconfont icon-f11"></i>
+                        </a>
+                        <div class="pull-down">
+                            <p>负责和参与的项目</p>
+                            <p>负责的项目</p>
+                            <p>参与的项目</p>
+                            <p>创建的项目</p>
+                        </div>
+                    </div>
+                </li>
+               <!-- <li  class="dropDownList">
+                    <div class="div">
+                        <a href="">
+                            <span>视图</span>
+                            <i class="iconfont icon-f11"></i>
+                        </a>
+                        <div class="pull-down">
+                            <p>默认</p>
+                            <p>按反馈时间</p>
+                            <p>按任务更新时间</p>
+                            <p>按任务创建时间(最新)上</p>
+                        </div>
+                    </div>
+                </li>-->
+                <li  class="dropDownList">
+                    <div class="div">
+                        <a href="">
+                            <span>排序</span>
+                            <i class="iconfont icon-f11"></i>
+                        </a>
+                        <div class="pull-down">
+                            <p>默认</p>
+                            <p>按反馈时间</p>
+                            <p>按任务更新时间</p>
+                            <p>按任务创建时间(最新)上</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropDownList">
+                    <div class="div">
+                        <a href="">
+                            <span>筛选</span>
+                            <i class="iconfont icon-f11"></i>
+                        </a>
+                        <div class="pull-down">
+                            <p>默认</p>
+                            <p>按反馈时间</p>
+                            <p>按任务更新时间</p>
+                            <p>按任务创建时间(最新)上</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="div">
+                        <a href="">
+                            <span>项目搜索</span>
+                            <i class="iconfont icon-f11"></i>
+                        </a>
+                    </div>
+                </li>
+                <li></li>
+                <li><i class="iconfont icon-bangzhudisc"></i></li>
+                <li>
+                    <span>
+                        <i class="iconfont icon-arrow-down"></i>
+                    </span>
+                </li>
+                <li class="popUpBtn">
+                    <span>
+                        <i class="glyphicon glyphicon-plus"></i>
+                        添加项目
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <p>其它(<i>5</i>)</p>
+        <ul class="ul">
+            [#list pageData.content as item]
+            <li class="li">
+                <a href="${siteurl}project/${item.id}.htm">
+                <div class="dd">
+                    <img src="./img/18.png" alt="">
+                    <div class="plan">0%</div>
+                </div>
+                <div class="dt">
+                    <p>${item.name!""}</p>
+                    <span><b>负责人：</b><i>贾魁</i></span>
+                </div>
+                <strong class="iconfont icon-wujiaoxing"></strong>
+                </a>
+            </li>
+          [/#list]
+        </ul>
+        <!--模态框-->
+        <div class="add-infor">
+            <div class="add-header">
+                <div class="projects">
+                    <h5>添加新项目</h5>
+                </div>
+                <span class="glyphicon glyphicon-remove"></span>
+                <div class="preservation">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                    保存
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="projects-name">
+                    <img src="./img/13.png" alt="">
+                    <input type="text" placeholder="添加项目名称">
+                </div>
+                <div class="name">
+                    <span>负责人：</span>
+                    <i></i>
+                    <input id="name" type="text" placeholder="输入姓名">
+                    <b class="iconfont"></b>
+                </div>
+                <div class="Project-details">
+                    <span class="iconfont icon-tianjia"></span>
+                    <input type="text" placeholder="输入姓名">
+                </div>
+                <ul>
+                    <li>
+                        <span>参与人员 ：</span>
+                        <div class="staff-name">
+
+                        </div>
+                        <div class="participant" style="display: none">
+                            <input type="text" placeholder="输入姓名">
+                            <a href="">
+                                <i class="iconfont icon-sousuo"></i>
+                            </a>
+                            <div class="personnel">
+                                <p><img src="./img/avatar.png"><span>贾魁</span></p>
+                                <p><img src="./img/avatar.png"><span>年糕</span></p>
+                                <p><img src="./img/avatar.png"><span>贾</span></p>
+                                <p><b class="glyphicon glyphicon-plus"></b>邀请同事</p>
+                            </div>
+                        </div>
+                        <b class="iconfont icon-icon02"></b>
+                    </li>
+                    <li>
+                        <div class="dt">
+                            <span>起止日期 ：</span>
+                            <div class="date">
+                                <input type="text" data-beatpicker="true"/><i>-</i>
+                                <input type="text" data-beatpicker="true"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>共&nbsp;&nbsp;享 ：</span>
+                        <div class="staff-name">
+                        </div>
+                        <div class="participant" style="display: none">
+                            <select>
+                                <option value="volvo" selected="selected">用户</option>
+                                <option value="saab">部门</option>
+                                <option value="fiat">群组</option>
+                                <option value="audi">所有人</option>
+                            </select>
+                            <input type="text" placeholder="输入姓名">
+                            <a href="">
+                                <i class="iconfont icon-sousuo"></i>
+                            </a>
+                            <div class="personnel">
+                                <p><img src="./img/avatar.png"><span>贾魁</span></p>
+                                <p><img src="./img/avatar.png"><span>年糕</span></p>
+                                <p><img src="./img/avatar.png"><span>贾</span></p>
+                                <p><b class="glyphicon glyphicon-plus"></b>邀请同事</p>
+                            </div>
+                        </div>
+                        <b class="iconfont icon-icon02"></b>
+                    </li>
+                    <li>
+                        <span>项目分类 ：</span>
+                        <select>
+                            <option value="volvo" selected="selected">其他</option>
+                        </select>
+                    </li>
+                    <li>
+                        <div class="upload">
+                            <span>附&nbsp;&nbsp;件 ：</span>
+                            <div id="upload-wrap" class="upload-widget-wrap upload-btn-wrap acl-hide html5">
+                                <a id="pickFiles" class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+                                    <i class="icon-upload-alt"></i> 上传附件</a>
+                                <span class="upload-tip">点击左侧上传按钮选择文件或将文件拖拽到此</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="footer">
+                    <div class="handle-item">
+                        <a id="icon-paperclip-a" for="#mainline-new-attachment">
+                            <i class="iconfont icon-fujian"></i>附件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="${siteurl}${siteurl}assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="${siteurl}plugins/beatpicker/js/BeatPicker.min.js"></script>
+<script src="${siteurl}dist/js/common.js"></script>
+<script src="${siteurl}plugins/beatpicker/js/prism.js"></script>
+<script src="${siteurl}dist/js/index.js"></script>
+</body>
+</html>

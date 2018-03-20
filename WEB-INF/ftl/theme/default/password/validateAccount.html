@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/sign-global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/password.css">
+    [#include "/theme/default/common/header.html" /]
+    [#include "/theme/default/password/step.html" /]
+</head>
+<body>
+[@nav /]
+<section class="content">
+    [@step index=3 /]
+    <!--表单-->
+    <div class="pwdContent">
+        <div class="title">通过手机(157*****292)找回密码  <a class="changeWay" href="${siteurl}password/reset.htm">[换一个找回方式]</a></div>
+        <div class="error error-curr pl150"></div>
+        <div class="ui-form-item">
+            <label class="ui-label">短信验证码：</label>
+            <input class="ui-input ui-input-check" type="text" name="code" maxlength="6">
+            <span class="dn timer"></span>
+            <button type="button" class="freeAccessCode btn btn-lg">获取验证码</button>
+        </div>
+        <div class="ui-form-item">
+            <label class="ui-label">新密码：</label>
+            <input class="ui-input" type="password" name="newPwd">
+        </div>
+        <div class="ui-form-item">
+            <label class="ui-label">确认密码：</label>
+            <input class="ui-input" type="password" name="confirmPwd">
+        </div>
+        <div class="ui-form-item pl150">
+            <button type="submit" class="btn btn-lg btn-primary btn-minw80">完成</button>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".btn-primary").on("click",function(){
+            $(".error").html("手机验证码不能为空").css("display","block")
+        })
+    })
+</script>
+</body>
+</html>

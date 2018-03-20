@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/sign-global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/signup.css">
+    [#include "/theme/default/common/header.html" /]
+    [#include "/theme/default/common/step.html" /]
+</head>
+<body>
+[@nav /]
+<section class="content">
+    <!--当前步骤-->
+    [@step index=3 /]
+    <!--表单-->
+    <div id="userinfo-company" class="g-780 res-panel ">
+        <div class="res-company-panel box-shadow">
+            <div class="company-search-panel">
+                <div id="create-message" class="error error-row hide"></div>
+                <input id="authPassword" type="hidden" name="authPassword" value="">
+                <input id="authAccount" type="hidden" name="authAccount" value="540421017@qq.com">
+                <input id="thiredPasssword" type="hidden" name="thiredPasssword" value="">
+                <div id="account-info" class="mgb20 f14 tc hide" style="display: block;">亲，您的账号<strong>540421017@qq.com</strong>还没有加入任何团队哟，您可以通过以下方式快速体验!</div>
+                <div id="inviteErr-message" class="tc res-follow error"></div>
+                <input id="inviteNewTenant" type="hidden" name="inviteNewTenant" value="">
+                <div class="ui-form-item cl inviteCode-div">
+                    <label class="ui-label">邀请码:</label>
+                    <input id="inviteCode" name="inviteCode" type="text" class="ui-input" placeholder="非必填">
+                </div>
+                <!--加入团队-->
+                <div id="apply-panel" class="apply-panel hide">
+                    <div class="tc">
+                        <input id="keywords" type="text" class="ui-input ui-input-sm mgr10 tl" placeholder="请输入您的团队名称">
+                        <a id="search-btn" class="btn btn-lg btn-primary">搜索</a>
+                    </div>
+                    <div id="company-search-error" class="error tips pl118"></div>
+                    <div id="documentlist-loading" class="loading_small mgt10 tc hide"><span>正在加载数据，请稍后...</span></div>
+                    <ul id="search-result" class="company-search-result hide"></ul>
+                    <div id="result-choose" class="ui-colorbox ui-colorbox-info mgt10 hide">
+                        <em>提示：</em>
+                        <span id="exists-result" class="hide">以上是与您搜索相类似的团队，您可以输入更接近的关键字，也可选择申请加入团队、</span>
+                        <span id="no-result" class="hide">没有找到与您搜索相类似的团队，你可以选择</span>
+                        <a id="create-link">创建团队</a>或
+                        <a id="immediate-link">立即体验</a>
+                    </div>
+                </div>
+                <hr id="apply-hr" class="hide">
+                <!--创建团队-->
+                <div id="create-panel" class="create-panel hide">
+                    <h3 class="tc">请输入团队基本信息</h3>
+                    <form id="create-form" method="post" class="ui-form" novalidate="novalidate">
+                        <input id="account" type="hidden" name="account" value="540421017@qq.com">
+                        <div id="company-init-error" class="error error-row"></div>
+                        <div class="ui-form-item cl">
+                            <label class="ui-label">团队名称<span style="color:red;">*</span></label>
+                            <input class="ui-input" id="tenantName" type="text" name="tenantName">
+                            <label for="tenantName" class="error"></label>
+                        </div>
+                        <div class="ui-form-item cl">
+                            <label class="ui-label">联系人手机<span style="color:red;">*</span></label>
+                            <input class="ui-input" id="mobile" type="text" name="mobile">
+                            <label for="mobile" class="error"></label>
+                        </div>
+                        <div class="ui-form-item cl">
+                            <label class="ui-label">联系人邮箱</label>
+                            <input class="ui-input" id="email" type="text" name="email">
+                            <label for="email" class="error"></label>
+                        </div>
+                        <div class="ui-form-item cl hide">
+                            <input class="ui-input" id="createInviteCode" type="text" name="createInviteCode">
+                        </div>
+                        <div class="tc">
+                            <input type="hidden" name="execution" value="e19s1">
+                            <input type="hidden" name="_eventId" value="create">
+                            <input id="finish-btn" type="submit" class="btn btn-lg btn-success" value="完成，进入体验">
+                            <input type="reset" class="btn btn-lg btn-reset-company mgr10" value="重置">
+                        </div>
+                    </form>
+                </div>
+                <hr id="create-hr" class="hide">
+                <div id="immediate-panel" class="immediate-panel hide">
+                    <h3 class="tc">请输入团队创建人基本信息</h3>
+                    <form id="immediate-form" method="post" class="ui-form" novalidate="novalidate">
+                        <div class="ui-form-item cl">
+                            <label class="ui-label">联系人手机<span style="color:red;">*</span></label>
+                            <input class="ui-input" id="immediate-mobile" type="text" name="immediate-mobile">
+                            <label for="immediate-mobile" class="error"></label>
+                        </div>
+                        <input type="hidden" name="account" value="540421017@qq.com">
+                        <input type="hidden" name="novalidInviteCode" id="novalidInviteCode">
+                        <!-- 				    	<input type="hidden" name="_eventId" value="create" /> -->
+                        <div class="tc">
+                            <input type="hidden" name="execution" value="e19s1">
+                            <input type="hidden" name="_eventId" value="create">
+                            <input id="immediate-finish-btn" type="submit" class="btn btn-lg btn-success" value="完成，进入体验">
+                            <input type="reset" class="btn btn-lg btn-reset-company mgr10" value="重置">
+                        </div>
+                    </form>
+                </div>
+                <p class="tc mgt10"><a id="immediate-btn" class="btn btn-lg w280" target="_blank">立即体验</a>
+                </p><p class="tc c-ltgray mgt5">（立即体验，稍后再进行信息完善）</p>
+                <p class="tc mgt10"><a id="create-btn" class="btn btn-lg w280 btn-success" target="_blank">创建团队</a></p>
+                <p class="tc c-ltgray mgt5" id="create-tip">（创建新的团队）</p>
+                <p class="tc mgt10"><a id="apply-btn" class="btn w280 btn-lg btn-primary" target="_blank">加入团队</a></p>
+                <p class="tc c-ltgray mgt5" id="apply-tip">（根据团队名称搜索，申请加入已有团队）</p>
+                <div class="tc mgt10"><a id="back-btn" href="#">返回登录</a></div>
+            </div>
+
+            <!--申请加入-->
+            <div class="company-clone hide">
+                <li id="company-search-item-clone" class="j_tenant_li company-search-item">
+                    <span class="tit"></span>
+                    <span class="com-name"><span class="j_com-name txt ellipsis"></span><span class="mark"></span></span>
+                    <span class="com-whoBuild"></span>
+                    <span class="j_options_apply j_options_join"><a class="com-join btn btn-primary btn-xs">申请加入团队</a></span>
+                    <span class="j_options_apply j_options_cancel hide"><a class="j_cancel_apply btn btn-xs">取消申请</a></span>
+                </li>
+                <li class="company-search-item company-search-item-head">
+                    <span class="tit">序号</span>
+                    <span class="com-name ellipsis">团队名称</span>
+                    <span class="com-whoBuild">团队联系人</span>
+                    <span>操作</span>
+                </li>
+            </div>
+            <!-- 用于克隆 -->
+            <div class="hide">
+                <a id="j_apply_clone" class="com-join btn btn-primary btn-xs">申请加入团队</a>
+                <a id="j_cancel_clone" class="j_cancel_apply btn btn-xs">取消申请</a>
+                <li id="j_applyed_li_clone" class="j_tenant_li company-search-item">
+                    <span class="tit">1</span>
+                    <span class="j_name com-name"><span class="j_name txt ellipsis"></span><span class="mark"></span></span>
+                    <span class="j_options_apply j_options_join hide"><a class="com-join btn btn-primary btn-xs">申请加入团队</a></span>
+                    <span class="j_options_apply j_options_cancel"><a class="j_cancel_apply btn btn-xs">取消申请</a></span>
+                </li>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#create-btn").on("click",function () {
+            //内容显示与隐藏
+            $("#apply-panel").attr("class","apply-panel hide");
+            $("#apply-hr").attr("class","hide");
+            $("#create-panel").attr("class","apply-panel");
+            $("#create-hr").attr("class","");
+
+            //按钮显示与隐藏
+            $("#apply-btn").removeClass("hide");
+            $("#apply-tip").removeClass("hide");
+            $(this).addClass("hide");
+            $("#create-tip").addClass("hide");
+        });
+        $("#apply-btn").on("click",function () {
+            //内容显示与隐藏
+            $("#apply-panel").attr("class","apply-panel");
+            $("#apply-hr").attr("class","");
+            $("#create-panel").attr("class","apply-panel hide");
+            $("#create-hr").attr("class","hide");
+
+            //按钮显示与隐藏
+            $(this).addClass("hide");
+            $("#apply-tip").addClass("hide");
+            $("#create-btn").removeClass("hide");
+            $("#create-tip").removeClass("hide");
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>更新</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" href="${siteurl}bootstrap/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="${siteurl}plugins/FontAwesome/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="${siteurl}plugins/ionicons201/css/ionicons.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="${siteurl}dist/css/AdminLTE.min.css">
+	<!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+	<link rel="stylesheet" href="${siteurl}dist/css/skins/_all-skins.min.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	[#include "/admin/common/commons.html"]
+
+	<!-- jQuery 2.2.3 -->
+	<script src="${siteurl}plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<!-- Bootstrap 3.3.6 -->
+	<script src="${siteurl}bootstrap/js/bootstrap.min.js"></script>
+	<!-- SlimScroll -->
+	<script src="${siteurl}plugins/slimScroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script src="${siteurl}plugins/fastclick/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="${siteurl}dist/js/app.min.js"></script>
+	<!-- AdminLTE for demo purposes -->
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+	<header class="main-header">
+		<!-- Header Navbar: style can be found in header.less -->
+		[#include "/admin/common/nav.html"]
+	</header>
+
+	<!-- =============================================== -->
+
+	<!-- Left side column. contains the sidebar -->
+	<aside class="main-sidebar">
+		<!-- sidebar: style can be found in sidebar.less -->
+		<section class="sidebar">
+			<!-- Sidebar user panel -->
+			<!-- Sidebar user panel -->
+			[@user_panel /]
+			<!-- search form -->
+			[@sidebar_form /]
+			<!-- /.search form -->
+			<!-- sidebar menu: : style can be found in sidebar.less -->
+			<ul class="sidebar-menu">
+				<li class="header">主面板</li>
+				[@menustag id=1]
+				[#list list as item]
+				[@menu item "1,27,28"]
+				[/@menu]
+				[/#list]
+				[/@menustag]
+			</ul>
+		</section>
+		<!-- /.sidebar -->
+	</aside>
+
+	<!-- =============================================== -->
+
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper">
+		<!-- Content Header (Page header) -->
+		<section class="content-header">
+			<h1>
+				用户管理
+				<small>更新</small>
+			</h1>
+		</section>
+		<!-- Main content -->
+		<section class="content">
+
+			<!-- Default box -->
+			<div class="col-xs-12">
+				<div class="box box-default box-solid">
+					<div class="box-header with-border">
+						<h3 class="box-title">更新</h3>
+					</div>
+					<!-- /.box-header -->
+					<!-- form start -->
+					<form class="form-horizontal" action="${siteurl}admin/contract/model_update.htm" method="post">
+						<input type="hidden" name="id" value="${model.id}">
+						<input type="hidden" name="pageNumber" value="${pageNumber!'1'}">
+						<div class="box-body">
+							<div class="form-group">
+								<label for="key" class="col-sm-2 control-label">key</label>
+								<div class="col-sm-10">
+									<input value="${model.key!''}" class="form-control" id="key" name="key" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="year" class="col-sm-2 control-label">year</label>
+								<div class="col-sm-10">
+									<input value="${model.year!''}" class="form-control" id="year" name="year" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="category" class="col-sm-2 control-label">category</label>
+								<div class="col-sm-10">
+									<input value="${model.category!''}" class="form-control" id="category" name="category" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="industry" class="col-sm-2 control-label">industry</label>
+								<div class="col-sm-10">
+									<input value="${model.industry!''}" class="form-control" id="industry" name="industry" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="payType" class="col-sm-2 control-label">payType</label>
+								<div class="col-sm-10">
+									<input value="${model.payType!''}" class="form-control" id="payType" name="payType" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="address" class="col-sm-2 control-label">address</label>
+								<div class="col-sm-10">
+									<input value="${model.address!''}" class="form-control" id="address" name="address" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="branchCompany" class="col-sm-2 control-label">branchCompany</label>
+								<div class="col-sm-10">
+									<input value="${model.branchCompany!''}" class="form-control" id="branchCompany" name="branchCompany" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="chargerName" class="col-sm-2 control-label">chargerName</label>
+								<div class="col-sm-10">
+									<input value="${model.chargerName!''}" class="form-control" id="chargerName" name="chargerName" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="chargerPhone" class="col-sm-2 control-label">chargerPhone</label>
+								<div class="col-sm-10">
+									<input value="${model.chargerPhone!''}" class="form-control" id="chargerPhone" name="chargerPhone" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="chargerPostion" class="col-sm-2 control-label">chargerPostion</label>
+								<div class="col-sm-10">
+									<input value="${model.chargerPostion!''}" class="form-control" id="chargerPostion" name="chargerPostion" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="checkdate" class="col-sm-2 control-label">checkdate</label>
+								<div class="col-sm-10">
+									<input value="${model.checkdate!''}" class="form-control" id="checkdate" name="checkdate" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="projectManagerPart" class="col-sm-2 control-label">projectManagerPart</label>
+								<div class="col-sm-10">
+									<input value="${model.projectManagerPart!''}" class="form-control" id="projectManagerPart" name="projectManagerPart" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="catalog" class="col-sm-2 control-label">catalog</label>
+								<div class="col-sm-10">
+									<input value="${model.catalog!''}" class="form-control" id="catalog" name="catalog" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="company" class="col-sm-2 control-label">company</label>
+								<div class="col-sm-10">
+									<input value="${model.company!''}" class="form-control" id="company" name="company" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contractBalance" class="col-sm-2 control-label">contractBalance</label>
+								<div class="col-sm-10">
+									<input value="${model.contractBalance!''}" class="form-control" id="contractBalance" name="contractBalance" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contractDate" class="col-sm-2 control-label">contractDate</label>
+								<div class="col-sm-10">
+									<input value="${model.contractDate!''}" class="form-control" id="contractDate" name="contractDate" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="scale" class="col-sm-2 control-label">scale</label>
+								<div class="col-sm-10">
+									<input value="${model.scale!''}" class="form-control" id="scale" name="scale" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="drawing" class="col-sm-2 control-label">drawing</label>
+								<div class="col-sm-10">
+									<input value="${model.drawing!''}" class="form-control" id="drawing" name="drawing" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="bidNotice" class="col-sm-2 control-label">bidNotice</label>
+								<div class="col-sm-10">
+									<input value="${model.bidNotice!''}" class="form-control" id="bidNotice" name="bidNotice" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="level" class="col-sm-2 control-label">level</label>
+								<div class="col-sm-10">
+									<input value="${model.level!''}" class="form-control" id="level" name="level" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contractDetail" class="col-sm-2 control-label">contractDetail</label>
+								<div class="col-sm-10">
+									<input value="${model.contractDetail!''}" class="form-control" id="contractDetail" name="contractDetail" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contractName" class="col-sm-2 control-label">contractName</label>
+								<div class="col-sm-10">
+									<input value="${model.contractName!''}" class="form-control" id="contractName" name="contractName" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contractperson" class="col-sm-2 control-label">contractperson</label>
+								<div class="col-sm-10">
+									<input value="${model.contractperson!''}" class="form-control" id="contractperson" name="contractperson" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contractScanning" class="col-sm-2 control-label">contractScanning</label>
+								<div class="col-sm-10">
+									<input value="${model.contractScanning!''}" class="form-control" id="contractScanning" name="contractScanning" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="customer" class="col-sm-2 control-label">customer</label>
+								<div class="col-sm-10">
+									<input value="${model.customer!''}" class="form-control" id="customer" name="customer" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="customerName" class="col-sm-2 control-label">customerName</label>
+								<div class="col-sm-10">
+									<input value="${model.customerName!''}" class="form-control" id="customerName" name="customerName" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="customerType" class="col-sm-2 control-label">customerType</label>
+								<div class="col-sm-10">
+									<input value="${model.customerType!''}" class="form-control" id="customerType" name="customerType" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="mail" class="col-sm-2 control-label">mail</label>
+								<div class="col-sm-10">
+									<input value="${model.mail!''}" class="form-control" id="mail" name="mail" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="note" class="col-sm-2 control-label">note</label>
+								<div class="col-sm-10">
+									<input value="${model.note!''}" class="form-control" id="note" name="note" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="num" class="col-sm-2 control-label">num</label>
+								<div class="col-sm-10">
+									<input value="${model.num!''}" class="form-control" id="num" name="num" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="rejectSource" class="col-sm-2 control-label">rejectSource</label>
+								<div class="col-sm-10">
+									<input value="${model.rejectSource!''}" class="form-control" id="rejectSource" name="rejectSource" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="state" class="col-sm-2 control-label">state</label>
+								<div class="col-sm-10">
+									<input value="${model.state!''}" class="form-control" id="state" name="state" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="telephone" class="col-sm-2 control-label">telephone</label>
+								<div class="col-sm-10">
+									<input value="${model.telephone!''}" class="form-control" id="telephone" name="telephone" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="totleBalance" class="col-sm-2 control-label">totleBalance</label>
+								<div class="col-sm-10">
+									<input value="${model.totleBalance!''}" class="form-control" id="totleBalance" name="totleBalance" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="totleGathering" class="col-sm-2 control-label">totleGathering</label>
+								<div class="col-sm-10">
+									<input value="${model.totleGathering!''}" class="form-control" id="totleGathering" name="totleGathering" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="totleInvoice" class="col-sm-2 control-label">totleInvoice</label>
+								<div class="col-sm-10">
+									<input value="${model.totleInvoice!''}" class="form-control" id="totleInvoice" name="totleInvoice" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="archiveDate" class="col-sm-2 control-label">archiveDate</label>
+								<div class="col-sm-10">
+									<input value="${model.archiveDate!''}" class="form-control" id="archiveDate" name="archiveDate" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="archiveEmployee" class="col-sm-2 control-label">archiveEmployee</label>
+								<div class="col-sm-10">
+									<input value="${model.archiveEmployee!''}" class="form-control" id="archiveEmployee" name="archiveEmployee" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="draft" class="col-sm-2 control-label">draft</label>
+								<div class="col-sm-10">
+									<input value="${model.draft!''}" class="form-control" id="draft" name="draft" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="user" class="col-sm-2 control-label">user</label>
+								<div class="col-sm-10">
+									<input value="${model.user!''}" class="form-control" id="user" name="user" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="employee" class="col-sm-2 control-label">employee</label>
+								<div class="col-sm-10">
+									<input value="${model.employee!''}" class="form-control" id="employee" name="employee" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="addDate" class="col-sm-2 control-label">addDate</label>
+								<div class="col-sm-10">
+									<input value="${model.addDate!''}" class="form-control" id="addDate" name="addDate" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lastDate" class="col-sm-2 control-label">lastDate</label>
+								<div class="col-sm-10">
+									<input value="${model.lastDate!''}" class="form-control" id="lastDate" name="lastDate" placeholder="" type="text">
+								</div>
+							</div>
+						</div>
+						<!-- /.box-body -->
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary pull-right">更新</button>
+						</div>
+						<!-- /.box-footer -->
+					</form>
+				</div>
+			</div>
+			<!-- /.box -->
+
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.content-wrapper -->
+
+	[#include "/admin/common/footer.html"]
+
+	<!-- Control Sidebar -->
+	[#include "/admin/common/aside.html"]
+
+	<!-- /.control-sidebar -->
+	<!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+	<div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+</script>
+</body>
+</html>

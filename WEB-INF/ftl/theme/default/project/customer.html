@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="${siteurl}${siteurl}favicon.ico">
+    <title>${model.name!""}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${siteurl}plugins/font/font_t9eba0ch4mwjyvi/iconfont.css">
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/common.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/statistics.css">
+    [#include "/theme/default/common/sites.html" /]
+    [#include "/theme/default/project/common.html" /]
+</head>
+<body>
+[@header index=1 /]
+<div class="father">
+    [@leftnav index=1 /]
+    <div class="right">
+        <div class="projectInformation">
+            <div class="header">
+                <div class="img">
+                    <img src="./img/18.png" alt="">
+                    <div class="shade">0%</div>
+                    <p data-toggle="tooltip" data-placement="bottom" title="${model.name!''}">${model.name!""}</p>
+                </div>
+                [@headnav index=2 /]
+            </div>
+            <div id="jk" class="coment" data-project="${model.id}">
+                rsrffsd
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="${siteurl}dist/js/common.js"></script>
+<script src="${siteurl}dist/js/statistics.js"></script>
+<script>
+</script>
+</body>
+</html>

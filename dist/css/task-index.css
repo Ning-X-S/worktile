@@ -1,0 +1,151 @@
+.father .left .tab i {
+    background: url(../img/eteams_icons.png) no-repeat -32px 0;
+}
+.father .left .tab i.comment {
+    background: url(../img/eteams_icons.png) no-repeat -160px 0;
+}
+.father .left .tab i.glyphicon {
+    background: none;
+}
+.father .right .sort {
+    background: #eee;
+}
+.father .right {
+    padding-left: 20px;
+}
+.father .right .right-content {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.right-list {
+    width: 65%;
+    overflow: hidden;
+    float: left;
+    padding-right: 24px;
+    border-right: 1px solid #d5d5d5;
+    transition: width 300ms;
+}
+.addList {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 25px 0;
+    line-height: 38px;
+    float: left;
+}
+.addList input {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 7px 0 7px 15px;
+    line-height: 24px;
+}
+.addList strong {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background: #d5d5d5;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 32px;
+}
+.father .right #main {
+    float: right;
+}
+.father .right .ul {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    padding:10px 0;
+    margin-bottom: 20px;
+}
+.father .right .ul .li{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    color: #666;
+    cursor: pointer;
+}
+.father .right .ul .li .dt {
+    position: relative;
+    top: 0;
+    line-height: 40px;
+    height: 40px;
+    padding: 0;
+}
+.father .right .ul .li .dt em {
+    float: left;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0;
+}
+.father .right .ul .li .dt em.checkbox {
+    display: none;
+}
+.list-right {
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 15px;
+    display: none;
+}
+.list-right span {
+    padding: 0 5px;
+}
+.father .right .ul .li:hover {
+    background: #f0f0f0;
+    transform: translate3d(0,0,0);
+    box-shadow: none;
+}
+.statistics {
+    width: 35%;
+    height: 100%;
+    float: right;
+    text-align: left;
+    padding-left: 20px;
+    transition: width 300ms;
+    position: relative;
+}
+.statistics p {
+    width: 100%;
+    float: left;
+    line-height: 44px;
+    border-bottom: 1px solid #d5d5d5;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+.chartBtn {
+    background-image: url(../img/eteams_icons.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: right -164px;
+    height: 48px;
+    width: 24px;
+    position: fixed;
+    margin: 0 0 0 -24px;
+    top: 150px;
+    right: 0;
+    cursor: pointer;
+    z-index: 99;
+}
+.statistics div.curr {
+    background-position: right -260px;
+    position: absolute;
+    top: 60px;
+    right: 100%;
+}

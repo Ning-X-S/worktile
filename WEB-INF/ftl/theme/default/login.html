@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+  <link rel="stylesheet" href="${siteurl}dist/css/sign-global.css">
+  <link rel="stylesheet" href="${siteurl}dist/css/login.css">
+  [#include "/theme/default/common/header.html" /]
+  [#include "/theme/default/common/step.html" /]
+</head>
+<body>
+[@nav /]
+<section class="content">
+  <!--表单-->
+  <div class="g-600 login-panel" id="login-wrapper">
+    <div class="box-shadow">
+      <h1 class="singleHead">用户登录</h1>
+      <form id="loginForm" action="${siteurl}login.htm" class="ui-form" method="post">
+        <div class="ui-form-item">
+          <label class="ui-label" for="username">帐 号:</label>
+          <input class="ui-input" type="text" id="username" name="username" value="" placeholder="请输入您注册的邮箱或手机号">
+        </div>
+        <div class="ui-form-item">
+          <label class="ui-label" for="password">密 码:</label>
+          <input class="ui-input" type="password" id="password" name="password" placeholder="请输入密码">
+        </div>
+        <div class="login-bar cl">
+          <input id="j_autoLogin" class="ui-checkbox" type="checkbox" name="rememberMe" value="true">
+          <span class="mgr40"><label for="j_autoLogin">自动登录</label></span>
+          <a class="mgr10 fr" href="${siteurl}signup.htm">注册</a>
+          <a class="fr" href="${siteurl}password/index.htm">忘记密码？</a>
+
+        </div>
+        <div class="fmes-bar">
+          <button type="submit" class="btn btn-lg btn-primary mgl160">登 录</button>
+        </div>
+        <div class="login-otherway">
+          <h3>使用第三方账号登录</h3>
+          <div class="a-icons">
+            <a href="#" class="qq"></a>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="wechat"></a>
+            <a href="#" class="enterprise"></a>
+          </div>
+          <div class="a-icons-txt">
+            <span>QQ</span>
+            <span>微博</span>
+            <span>微信</span>
+            <span>企业微信</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/sign-global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/signup.css">
+    [#include "/theme/default/common/header.html" /]
+    [#include "/theme/default/common/step.html" /]
+</head>
+<body>
+[@nav /]
+<section class="content">
+    <!--当前步骤-->
+    [@step index=1 /]
+    <!--表单-->
+    <div class="g-600 res-person-panel">
+        <form method="post" class="ui-form" id="registerForm" name="registerForm" novalidate="novalidate">
+            <div class="ui-form-item">
+                <label class="ui-label">账号<span style="color:red;">*</span></label>
+                <input class="ui-input" id="account" type="text" value="" name="account" placeholder="请输入邮箱或手机号">
+                <label for="account" generated="true" class="error"></label>
+                <span id="account-tips" class="error"></span>
+            </div>
+            <div class="ui-form-item">
+                <label class="ui-label">姓名<span style="color:red;">*</span></label>
+                <input class="ui-input" id="username" name="username" type="text" value="" placeholder="请输入姓名">
+                <label for="username" generated="true" class="error"></label>
+            </div>
+            <div class="ui-form-item">
+                <label class="ui-label">密码<span style="color:red;">*</span></label>
+                <input class="ui-input" id="password" name="password" type="password" placeholder="请输入至少6位密码">
+                <label for="password" generated="true" class="error password-error"></label>
+            </div>
+            <div class="ui-form-item">
+                <label class="ui-label">密码确认<span style="color:red;">*</span></label>
+                <input class="ui-input" id="password2" type="password" name="password2" placeholder="请确认密码">
+                <label for="password2" generated="true" class="error"></label>
+                <input type="hidden" name="execution" value="e11s1">
+                <input type="hidden" name="_eventId" value="submit">
+            </div>
+            <div class="mgb20 pl95">
+                <input type="checkbox" checked="" id="contract" name="contract" class="ui-checkbox">我同意<a href="https://www.eteams.cn/services.html" target="_blank">服务条款</a>
+                <label for="contract" generated="true" class="error"></label>
+            </div>
+            <div class="pl95">
+                <input id="user-submit-btn" class="btn btn-lg  btn-primary mgr10" type="text" value="　下 一 步　">
+                <a id="btn-cancle" class="btn btn-lg">重置</a>
+            </div>
+        </form>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+    //点击下一步
+    $("#user-submit-btn").on("click",function(){
+        var account = $("#account").val();
+        console.log(account);
+        if(account.indexOf("@")>-1 && account.indexOf(".")>-1){
+            window.location.href = "${siteurl}stepone.htm?way=email"
+        }else {
+            window.location.href = "${siteurl}stepone.htm?way=phone"
+        }
+    });
+
+
+    //验证邮件格式
+    function ismail(obj){
+        var reg=/[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/;
+        if(!reg.test(obj.value)){
+            alert("请正确填写邮箱！");
+            obj.value="";
+        }
+    }
+
+    //电话号码验证
+    function isnum(obj){
+        var reg=/^1[0-9]{10}/;
+        if(!reg.test(obj.value)){
+            alert("请正确填写手机号！");
+            obj.value="";
+        }
+    }
+
+</script>
+</body>
+</html>

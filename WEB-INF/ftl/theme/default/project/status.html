@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="${siteurl}${siteurl}favicon.ico">
+    <title>${model.name!""}</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="${siteurl}plugins/font/font_t9eba0ch4mwjyvi/iconfont.css">
+    <link rel="stylesheet" href="${siteurl}plugins/Global.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/common.css">
+    <link rel="stylesheet" href="${siteurl}dist/css/status.css">
+    <style>
+    </style>
+    [#include "/theme/default/common/sites.html" /]
+    [#include "/theme/default/project/common.html" /]
+</head>
+<body>
+[@header index=1 /]
+<div class="father">
+    [@leftnav index=1 /]
+    <div class="right">
+        <!--<div class="scaling">-->
+        <!--<div class="hd">-->
+        <!--<div class="input">-->
+        <!--<a class="selectui-result dropdown-toggle">负责和参与的项目<i class="iconfont icon-f11"></i></a>-->
+        <!--<ul>-->
+        <!--<li><a>负责和参与的项目</a></li>-->
+        <!--<li><a>负责的项目</a></li>-->
+        <!--<li><a>参与的项目</a></li>-->
+        <!--<li><a>创建的项目</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="ft">-->
+        <!--<ul>-->
+        <!--[#list 1..10 as item]-->
+        <!--<li>-->
+        <!--<dt><img src="./img/18.png"><div class="percent j_percent">0%</div></dt>-->
+        <!--<dd><div class="caption"><div class="cell"><span data-toggle="tooltip" data-placement="top" title="Tooltip on top">吴堡县公安局城区派出所地勘编制</span></div></div></dd>-->
+        <!--</li>-->
+        <!--[/#list]-->
+        <!--</ul>-->
+        <!--<div class="bottom" style="height: 112px"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="projectInformation">
+            <div class="header">
+                <div class="img">
+                    <img src="${siteurl}dist/img/18.png" alt="">
+                    <div class="shade">0%</div>
+                    <p data-toggle="tooltip" data-placement="bottom" title="${model.name!''}">${model.name!""}</p>
+                </div>
+                [@headnav index=11 /]
+            </div>
+            <div class="toolkit-bar">
+                <ul>
+                    <li>
+                        <span>筛选<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <span>排序<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-sousuo"></i>
+                        <input class="fatherInput" type="text" placeholder="搜索任务">
+                    </li>
+                    <li>
+                        <span>+&nbsp;新建任务分组</span><i class="iconfont  icon-arrow-down"></i>
+                    </li>
+                    <li>
+                        <span>排序<i class="iconfont icon-f11"></i></span>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="vehicle" value="Car" />
+                        包含已完成
+                    </li>
+                </ul>
+            </div>
+            <div class="coment">
+                <div class="panel-detail">
+                    <div class="panel-heading">
+                        <span>项目状态</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="section">
+                            <div class="status-setting">
+                                <div class="head-title">项目负责人：</div>
+                                <div class="status-content">
+                                    <img src="${siteurl}dist/img/gg.png" alt="">
+                                    <span>cng1985</span>
+                                </div>
+                            </div>
+                            <div class="status-setting--line"></div>
+                            <div class="status-setting">
+                                <div class="head-title">项目开始时间：</div>
+                                <div class="status-content">
+                                    <i></i>
+                                    <span>开始时间</span>
+                                </div>
+                            </div>
+                            <div class="status-setting--line"></div>
+                            <div class="status-setting">
+                                <div class="head-title">项目结束时间：</div>
+                                <div class="status-content">
+                                    <i></i>
+                                    <span>2017年12月8日</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="status-setting">
+                                <div class="head-title">当前状态：</div>
+                                <div class="status-content">
+                                    <div class="circle"></div>
+                                    <div class="badge-text">正常</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="status-setting">
+                                <div class="head-title">当前状态：</div>
+                                <div class="status-content">
+                                    <div class="circle"></div>
+                                    <div class="badge-text">暂无</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-detail">
+                    <div class="panel-heading">
+                        <span>更新记录</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="section">
+                            <ul>
+                                <li>
+                                    <img src="${siteurl}dist/img/gg.png" alt="">
+                                    <div class="status-meta">
+                                        <span>cng1985</span>
+                                        <span>2017年10月19日 15:27</span>
+                                    </div>
+                                    <div class="status-detail">暂无</div>
+                                </li>
+                                <li>
+                                    <img src="${siteurl}dist/img/gg.png" alt="">
+                                    <div class="status-meta">
+                                        <span>cng1985</span>
+                                        <span>2017年10月19日 15:27</span>
+                                    </div>
+                                    <div class="status-detail">暂无</div>
+                                </li>
+                                <li>
+                                    <img src="${siteurl}dist/img/gg.png" alt="">
+                                    <div class="status-meta">
+                                        <span>cng1985</span>
+                                        <span>2017年10月19日 15:27</span>
+                                    </div>
+                                    <div class="status-detail">暂无</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="${siteurl}dist/js/common.js"></script>
+<script src="${siteurl}dist/js/status.js"></script>
+
+</body>
+</html>
